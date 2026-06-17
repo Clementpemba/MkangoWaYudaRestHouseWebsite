@@ -3,8 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-  <title>Mkango wa Yuda Resthouse | Likoma Island</title>
+  
+  <!-- ============================================================
+       SEO META TAGS - For Google Search
+       ============================================================ -->
+  <title>Mkango wa Yuda Resthouse | Likoma Island Accommodation</title>
+  <meta name="description" content="Book your stay at Mkango wa Yuda Resthouse on Likoma Island, Lake Malawi. Enjoy peaceful accommodation, stunning lake views, and warm Malawian hospitality." />
+  <meta name="keywords" content="Likoma Island accommodation, Mkango wa Yuda, Lake Malawi lodges, Malawi resthouse, Likoma Island hotels, Lake Malawi, Likoma Island" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mkango-resthouse.vercel.app/" />
+  
+  <!-- Open Graph (for social media sharing - Facebook, WhatsApp, etc.) -->
+  <meta property="og:title" content="Mkango wa Yuda Resthouse | Likoma Island" />
+  <meta property="og:description" content="Peaceful accommodation on Likoma Island, Lake Malawi" />
+  <meta property="og:url" content="https://mkango-resthouse.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://mkango-resthouse.vercel.app/mkango.jpg" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mkango wa Yuda Resthouse | Likoma Island" />
+  <meta name="twitter:description" content="Peaceful accommodation on Likoma Island, Lake Malawi" />
+  <meta name="twitter:image" content="https://mkango-resthouse.vercel.app/mkango.jpg" />
+  
+  <!-- ============================================================
+       SCHEMA.ORG STRUCTURED DATA (Rich Results in Google)
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Mkango wa Yuda Resthouse",
+    "description": "Peaceful accommodation on Likoma Island, Lake Malawi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Likoma Island",
+      "addressCountry": "Malawi"
+    },
+    "telephone": "+265990152290",
+    "email": "pembaclement7@gmail.com",
+    "priceRange": "$$",
+    "image": "https://mkango-resthouse.vercel.app/mkango.jpg",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-12.0667",
+      "longitude": "34.7333"
+    }
+  }
+  </script>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
   <style>
     * {
       margin: 0;
@@ -87,7 +136,7 @@
     }
 
     /* ============================================================
-       HERO WITH TRANSPARENT BUTTONS
+       HERO WITH ZOOMED BACKGROUND VIDEO + TRANSPARENT BUTTONS
        ============================================================ */
     .hero {
       position: relative;
@@ -177,7 +226,7 @@
     }
 
     /* ============================================================
-       TRANSPARENT BUTTONS - Glass Morphism Effect
+       TRANSPARENT GLASS-MORPHISM BUTTONS
        ============================================================ */
     .btn {
       display: inline-block;
@@ -211,7 +260,7 @@
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     }
 
-    /* Book Now button - slightly more visible but still transparent */
+    /* Book Now - Gold tint, transparent */
     .btn-primary {
       background: rgba(212, 167, 67, 0.35);
       border-color: rgba(212, 167, 67, 0.5);
@@ -223,7 +272,7 @@
       border-color: rgba(212, 167, 67, 0.8);
     }
 
-    /* Gallery button - very transparent */
+    /* Gallery - Very transparent */
     .btn-outline {
       background: rgba(255, 255, 255, 0.08);
       border-color: rgba(255, 255, 255, 0.25);
@@ -235,7 +284,7 @@
       border-color: rgba(255, 255, 255, 0.5);
     }
 
-    /* WhatsApp button - slightly transparent */
+    /* WhatsApp - Green tint, transparent */
     .btn-whatsapp {
       background: rgba(37, 211, 102, 0.3);
       border-color: rgba(37, 211, 102, 0.4);
@@ -369,7 +418,6 @@
     /* ============================================================
        VIDEO ZOOM FIX
        ============================================================ */
-    
     .video-container {
       position: relative;
       width: 100%;
@@ -815,7 +863,7 @@
     </div>
   </nav>
 
-  <!-- HERO WITH TRANSPARENT BUTTONS -->
+  <!-- HERO WITH ZOOMED BACKGROUND VIDEO + TRANSPARENT BUTTONS -->
   <header class="hero" id="home">
     <div class="hero-video-wrapper">
       <video class="hero-video" autoplay muted loop playsinline>
