@@ -87,7 +87,7 @@
     }
 
     /* ============================================================
-       HERO WITH SUPER ZOOMED BACKGROUND VIDEO
+       HERO WITH TRANSPARENT BUTTONS
        ============================================================ */
     .hero {
       position: relative;
@@ -120,11 +120,6 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(2.2);
-      /* 
-        scale(2.2) = 120% ZOOM - ALL TikTok frames and text GONE!
-        The video is now zoomed in so much that only the center is visible
-        No frames, no text, no watermarks at all!
-      */
       min-width: 100%;
       min-height: 100%;
       width: auto;
@@ -181,22 +176,28 @@
       justify-content: center;
     }
 
+    /* ============================================================
+       TRANSPARENT BUTTONS - Glass Morphism Effect
+       ============================================================ */
     .btn {
       display: inline-block;
-      background: #d4a743;
-      color: #1e2b1c;
       padding: 0.7rem 1.4rem;
       border-radius: 50px;
       font-weight: 600;
       text-decoration: none;
-      transition: 0.25s;
-      border: none;
+      transition: 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
       cursor: pointer;
       font-size: 0.9rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       flex: 1 1 auto;
       min-width: 120px;
       text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
 
     .btn i {
@@ -204,29 +205,46 @@
     }
 
     .btn:hover {
-      transform: translateY(-2px);
-      background: #e8c16a;
+      transform: translateY(-3px) scale(1.02);
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     }
 
+    /* Book Now button - slightly more visible but still transparent */
+    .btn-primary {
+      background: rgba(212, 167, 67, 0.35);
+      border-color: rgba(212, 167, 67, 0.5);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: rgba(212, 167, 67, 0.55);
+      border-color: rgba(212, 167, 67, 0.8);
+    }
+
+    /* Gallery button - very transparent */
     .btn-outline {
-      background: transparent;
-      border: 2px solid #f5efe6;
-      color: #f5efe6;
-      box-shadow: none;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
     }
 
     .btn-outline:hover {
-      background: #f5efe6;
-      color: #1e2b1c;
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
     }
 
+    /* WhatsApp button - slightly transparent */
     .btn-whatsapp {
-      background: #25d366;
-      color: white;
+      background: rgba(37, 211, 102, 0.3);
+      border-color: rgba(37, 211, 102, 0.4);
+      color: #ffffff;
     }
 
     .btn-whatsapp:hover {
-      background: #1da85a;
+      background: rgba(37, 211, 102, 0.5);
+      border-color: rgba(37, 211, 102, 0.7);
     }
 
     /* ----- SECTION COMMON ----- */
@@ -349,7 +367,7 @@
     }
 
     /* ============================================================
-       VIDEO ZOOM FIX - This removes TikTok text and frames
+       VIDEO ZOOM FIX
        ============================================================ */
     
     .video-container {
@@ -797,7 +815,7 @@
     </div>
   </nav>
 
-  <!-- HERO WITH SUPER ZOOMED BACKGROUND VIDEO -->
+  <!-- HERO WITH TRANSPARENT BUTTONS -->
   <header class="hero" id="home">
     <div class="hero-video-wrapper">
       <video class="hero-video" autoplay muted loop playsinline>
@@ -809,7 +827,7 @@
       <h1><i class="fas fa-crown"></i> Mkango wa Yuda</h1>
       <p><i class="fas fa-map-pin"></i> Likoma Island · Lake Malawi</p>
       <div class="btn-group">
-        <a class="btn" onclick="openModal()"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <a class="btn btn-primary" onclick="openModal()"><i class="fas fa-calendar-check"></i> Book Now</a>
         <a class="btn btn-outline" href="#gallery"><i class="fas fa-images"></i> Gallery</a>
         <a class="btn btn-whatsapp" href="https://wa.me/265990152290" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
